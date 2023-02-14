@@ -8,9 +8,14 @@ interface Props {
 }
 export default function MenuItem({ title, address, Icon }: Props) {
 	return (
-		<Link href={address} className="px-8 py-4 hover:text-blue-500">
-			<Icon className="text-2xl mx-auto" />
-			<span className="font-medium hidden sm:inline uppercase">{title}</span>
+		<Link
+			href={address}
+			className="px-4 py-2 hover:text-red-500 text-black dark:text-slate-100 dark:hover:opacity-50"
+		>
+			<Icon className="text-xl mx-auto mb-1" />
+			<span className="font-medium hidden sm:inline uppercase text-sm">
+				{title}
+			</span>
 		</Link>
 	)
 }

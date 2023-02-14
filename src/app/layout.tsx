@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import './globals.css'
+import Providers from './Providers'
 
 export default function RootLayout({
 	children
@@ -8,11 +9,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="antialiased text-slate-600">
-				<Header />
-				{/* navbar */}
-				{/* searchbox */}
-				{children}
+			<body className="antialiased">
+				<Providers>
+					<Header />
+					{/* navbar */}
+					{/* searchbox */}
+					{children}
+				</Providers>
 			</body>
 		</html>
 	)

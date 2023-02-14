@@ -1,7 +1,7 @@
 export default function AboutPage() {
 	return (
-		<div className="max-w-6xl mx-auto p-4 space-y-4">
-			<h1 className="text-2xl font-medium text-black">About</h1>
+		<div className="space-y-4">
+			<h1 className="text-2xl font-medium">About</h1>
 			<p>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas iusto
 				nostrum ipsum esse, corrupti soluta blanditiis doloremque, consequuntur

@@ -14,7 +14,7 @@ export default function Card({ result }: { result: Result }) {
 				width={440}
 				height={240}
 				priority
-				className="rounded-md group-hover:opacity-50 transition-all duration-200"
+				className="rounded-md group-hover:opacity-50 transition-all duration-200 aspect-video object-cover bg-gray-200"
 				placeholder="blur"
 				blurDataURL="/spinner.svg"
 				style={{
@@ -27,7 +27,7 @@ export default function Card({ result }: { result: Result }) {
 					{result.overview}
 				</p>
 				<h2 className="font-bold">{result.title || result.name}</h2>
-				<p className="flex items-center text-sm text-gray-500">
+				<p className="flex items-center text-xs text-gray-400">
 					{result.release_date || result.first_air_date}{' '}
 					<FiThumbsUp className="mr-1 ml-3" /> {result.vote_count}
 				</p>

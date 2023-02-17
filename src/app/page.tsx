@@ -1,16 +1,13 @@
+export const dynamic = 'force-dynamic' // this is the fix
+
 import Results from '@/components/Results'
 import type { Result } from 'global.types'
 
 const API_KEY = process.env.API_KEY
 
-interface Props {
-	searchParams: {
-		genre: string
-	}
-}
-
-export default async function Home({ searchParams }: Props) {
+export default async function Home({ searchParams }: { searchParams?: any }) {
 	const genre = searchParams.genre || 'fetchTrending'
+
 	const res = await fetch(
 		`https://api.themoviedb.org/3/${
 			genre === 'fetchTopRated' ? 'movie/top_rated' : 'trending/all/week'
